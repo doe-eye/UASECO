@@ -57,7 +57,7 @@ class PluginCheckpoints extends Plugin {
 		$this->setAuthor('undef.de');
 		$this->setCoAuthors('aca');
 		$this->setVersion('1.0.3');
-		$this->setBuild('2019-10-06');
+		$this->setBuild('2019-10-07');
 		$this->setCopyright('2014 - 2019 by undef.de');
 		$this->setDescription('Stores Checkpoint timing and displays a Checkpoint Widget with timings from local/dedimania records.');
 
@@ -1258,7 +1258,7 @@ EOL;
 			$aseco->console('[Checkpoints] Cheat by ['. $login .'] detected! [CheckpointTimes: ('. $cps .'), FinishTime: '. $aseco->formatTime($this->checkpoints[$login]->current['finish']) .']');
 		}
 
-		$aseco->console('Checkpoints on map: '. $this->nb_checkpoints . ', Checkpoint where Cheat occured: '. $cpid .', Cheat-Time: '. $time);
+		$aseco->console('Checkpoints on map: '. $this->nb_checkpoints . ', Checkpoint where Cheat occured: '. $cpid .', Cheat-Time: '. $aseco->formatTime($time));
 
 
 		// Check for valid Player
